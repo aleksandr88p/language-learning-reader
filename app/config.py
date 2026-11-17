@@ -8,7 +8,6 @@ class Settings(BaseSettings):
     db_url: str 
 
     
-a = Settings()
 
 
 
