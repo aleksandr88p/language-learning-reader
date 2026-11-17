@@ -5,6 +5,13 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env')
     app_name: str = "Language Learning Reader"
     debug: bool = False
+    db_url: str 
+
     
+a = Settings()
+
+
+
+
 
 
