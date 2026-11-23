@@ -6,6 +6,7 @@ from typing import Optional
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from app.models.book import Book
+    from app.models.paragraph import Paragraph
 
 
 class Chapter(Base):
@@ -15,3 +16,4 @@ class Chapter(Base):
     title: Mapped[Optional[str]] = mapped_column(String(255))
     position: Mapped[int] = mapped_column(Integer, nullable=False)
     book: Mapped['Book'] = relationship(back_populates="chapters")
+    paragraphs: Mapped[list['Paragraph']] = relationship(back_populates='chapter')
